@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Outfit:wght@600&display=swap');
+
+body{
+    font-family: 'Outfit',sans-serif;
+    margin: 0;
+}
+.head-bg{
+    background: url('images/bckg.png');
+    background-position: 25% 35%;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
+    padding-bottom: 0;
+}
+header{
+    padding: 1em 0;
+}
+.head-bg a{
+    color: black;
+    text-shadow: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+section{
+    margin: 0 1em;
+}
+h1{
+    font-size: 2em;
+    margin: 1.5em 0 1.3em;
+}
+h1 span{
+    display: block;
+    font-size: 1.5em;
+    position: relative;
+    z-index: .5;
+}
+.hero-bg p{
+    font-weight: bold;
+    margin: 0 1em 3em;
+}
+.formm{
+    margin: 2em -1em 0;
+    padding: 2em;
+}
+label {
+    color: black;
+    text-shadow:  -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+    font-size: 1.2em;
+}
+input[type=text]{
+    border: 1px solid gray;
+    opacity: 70%;
+    width: 90%;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: .5em;
+    margin-top: 1.2em;
+    color: black;
+   
+  
+}
+.form p{
+    color:  white;
+    margin-bottom: 1em;
+    font-weight: normal;
+    font-size: .7em;
+    margin-top: .3em;
+}
+input[type=button]{
+    background-color: rgb(183, 180, 247) ;
+    border: none;
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    padding: .8em 0;
+    border-radius: .5em;
+    font-size: 1.3em;
+    cursor: pointer;
+    
+}
+input[type=button]:hover{
+    background-color: rgba(193, 190, 247, 0.774) ;
+}
+.bot{
+    margin: 0;
+}
+.right-col{
+    text-align: center;
+    margin: 3em 1em;
+}
+h2{
+    position: relative;
+}
+img {
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.9);
+    z-index: 1;
+    place-content: center;
+    color: white;
+    display: none;
+    opacity: 0;
+}
+@media (min-width: 730px){
+    
+    section{
+        margin: 0 4em;
+    }
+    .form{
+        margin: 2em -4em 0;
+    }
+}
+@media (min-width: 930px){
+    
+    .head-bg {
+        text-align: left;
+    }
+    .head-bg p{
+        margin: 0 0 3em;
+    }
+    .head-bg section{
+        width: 65%;
+    }
+    .form {
+        margin: 2em 0 0;
+        padding: 2em;
+        border-radius: .5em;
+        box-shadow: 10px 10px 10px rgba(0,0,0,.3) ;
+    }
+    form{
+        display: flex;
+        
+    }
+    .form-left{
+        width: 70%;
+    }
+    label{
+        margin: 0;
+    }
+    input[type="button"]{
+        height: fit-content;
+        font-size: 1.1em;
+        margin-left: 1em;
+        margin-top: 2.2em;
+        padding: .7em 0;
+        width: 30%;
+    }
+    .head-bg p{
+        margin-bottom: 0;
+    }
+
+    section.bot{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas:
+            "lang-bac content";
+    }
+    .right-col{
+        grid-area: content;
+        padding: 0 10%;
+        text-align: left;
+        align-self: center;
+    }
+    .img{
+        grid-area: lang-bac;
+    }
+    h2{
+        margin: 0;
+    }
+
+}
+
+.top{
+    animation: fadeIn 2s;
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-9em);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
